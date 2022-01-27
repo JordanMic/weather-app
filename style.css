@@ -1,0 +1,98 @@
+/*Zdjęcie autorstwa Elia Clerici z Pexels */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to bottom right, rgb(20, 213, 197), rgb(10, 113, 161));
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Nunito Sans', sans-serif;
+    overflow: hidden;
+}
+
+h1 {
+    padding-top: 15px;
+}
+
+.hundity,
+.weather,
+.city {
+    font-size: 290%;
+}
+
+.vis {
+    line-height: 60px;
+    font-size: 320%;
+}
+
+.temperature {
+    font-size: 720%;
+    font-weight: bold;
+}
+
+.boot {
+    margin-bottom: 5%;
+}
+
+input {
+    background-color: transparent;
+    border-style: none;
+    border-bottom: 1px solid white;
+    color: white;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+::placeholder {
+    color: white;
+    opacity: 0.5;
+}
+
+.fa-city {
+    font-size: 250%;
+    cursor: pointer;
+    transition: .3s;
+    color: white;
+    transform: translateX(200%);
+    /* animation: move 2s forwards; */
+}
+
+.fa-city:hover {
+    color: rgb(141, 202, 243);
+}
+
+.find {
+    display: inline-block;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+    cursor: pointer;
+}
+
+.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.move {
+    animation: move .5s forwards;
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-120%);
+    }
+}
